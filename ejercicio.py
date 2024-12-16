@@ -10,6 +10,8 @@ def detalles():
     st.markdown('**Comisión:** C2');
     st.markdown('**Nombre:** Alvarez Nicolas');
 
+def url_pagina ():
+    url = "https://examenfinalalvareznicolas-58731-c2.streamlit.app/"; 
 
 def crear_grafico(datos_producto, producto):
     ventas_por_producto = datos_producto.groupby(['Año', 'Mes'])['Unidades_vendidas'].sum().reset_index();
@@ -86,4 +88,5 @@ if archivo_cargado is not None:
                 st.pyplot(fig);
     else:
         st.error("Archivo erroneo!!! Solo archivo con extension .csv");
-detalles()
+detalles();
+url_pagina();
